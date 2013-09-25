@@ -98,7 +98,9 @@ define([
 			var dfd = xhr._ioSetArgs(args, cancel || this._deferredCancel, this._deferredOk, this._deferredError);
 
 			var ioArgs = dfd.ioArgs;
-			ioArgs.id = kernel._scopeName + "IoScript" + (this._counter++);
+      // callbackSuffix: to take advantage of ETags set by the ArcGIS server
+      // Added support for pre-determined callback name suffix
+      ioArgs.id = kernel._scopeName + "IoScript" + (args.callbackSuffix || (this._counter++));
 			ioArgs.canDelete = false;
 
 			//Special setup for jsonp case
