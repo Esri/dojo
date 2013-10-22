@@ -615,7 +615,7 @@ define([
 			};
 		}
 
-		var handleAs = XHR2_RESPONSE_TYPES[args.handleAs] ? args.handleAs : "text";
+		var handleAs = has("native-xhr2") && XHR2_RESPONSE_TYPES[args.handleAs] ? args.handleAs : "text";
 		if(handleAs === 'blob' && !has('native-xhr2-blob')){
 			handleAs = 'arraybuffer';
 		}
