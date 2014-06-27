@@ -766,6 +766,7 @@ define({ root:
 	"it": true,
 	"ja": true,
 	"ko": true,
+    "lt": true,
 	"nb": true,
 	"nl": true,
 	"pl": true,
@@ -776,6 +777,7 @@ define({ root:
 	"sv": true,
 	"th": true,
 	"tr": true,
+    "vi": true,
 	"zh": true,
 	"zh-hant": true
 });

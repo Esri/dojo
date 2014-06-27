@@ -725,6 +725,7 @@ define({ root:
 	"en": true,
 	"en-ca": true,
 	"es": true,
+	"et": true,
 	"fi": true,
 	"fr": true,
 	"hr": true,
@@ -734,6 +735,7 @@ define({ root:
 	"ja": true,
 	"ko": true,
 	"nb": true,
+	"lt": true,
 	"nl": true,
 	"pl": true,
 	"pt": true,
@@ -742,6 +744,7 @@ define({ root:
 	"ru": true,
 	"sv": true,
 	"th": true,
+	"vi": true,
 	"zh": true,
 	"zh-hant": true
 });

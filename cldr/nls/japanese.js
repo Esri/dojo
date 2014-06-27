@@ -1458,12 +1458,14 @@ define({ root:
 	"fi": true,
 	"fr": true,
 	"he": true,
+	"hi": true,
 	"hr": true,
 	"hu": true,
 	"id": true,
 	"it": true,
 	"ja": true,
 	"ko": true,
+    "lt": true,
 	"nb": true,
 	"nl": true,
 	"pl": true,
@@ -1474,6 +1476,7 @@ define({ root:
 	"sv": true,
 	"th": true,
 	"tr": true,
+    "vi": true,
 	"zh": true,
 	"zh-hant": true
 });

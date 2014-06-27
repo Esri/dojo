@@ -442,6 +442,8 @@ define({ root:
 	"el": true,
 	"en": true,
 	"es": true,
+    "lt": true,
+    "lv": true,
 	"fi": true,
 	"fr": true,
 	"he": true,
@@ -462,6 +464,7 @@ define({ root:
 	"sv": true,
 	"th": true,
 	"tr": true,
+    "vi": true,
 	"zh": true,
 	"zh-hant": true
 });

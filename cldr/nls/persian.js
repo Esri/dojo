@@ -425,6 +425,7 @@ define({ root:
 	"ar": true,
 	"cs": true,
 	"fr": true,
+	"hi": true,
 	"hr": true,
 	"hu": true,
 	"id": true,
