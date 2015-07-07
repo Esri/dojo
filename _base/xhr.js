@@ -44,6 +44,17 @@ define([
 
 	dojo._blockAsync = false;
 
+	has.add('native-xhr2-blob', function(){
+		if(!has('native-xhr2')){ return; }
+		var x = new XMLHttpRequest();
+		x.open('GET', '/', true);
+		x.responseType = 'blob';
+		// will not be set if unsupported
+		var responseType = x.responseType;
+		x.abort();
+		return responseType === 'blob';
+	});
+
 	// MOW: remove dojo._contentHandlers alias in 2.0
 	var handlers = dojo._contentHandlers = dojo.contentHandlers = {
 		// summary:
@@ -121,8 +132,8 @@ define([
 
 			if(result && has("dom-qsa2.1") && !result.querySelectorAll && has("dom-parser")){
 				// http://bugs.dojotoolkit.org/ticket/15631
-				// IE9 supports a CSS3 querySelectorAll implementation, but the DOM implementation 
-				// returned by IE9 xhr.responseXML does not. Manually create the XML DOM to gain 
+				// IE9 supports a CSS3 querySelectorAll implementation, but the DOM implementation
+				// returned by IE9 xhr.responseXML does not. Manually create the XML DOM to gain
 				// the fuller-featured implementation and avoid bugs caused by the inconsistency
 				result = new DOMParser().parseFromString(xhr.responseText, "application/xml");
 			}
@@ -157,6 +168,15 @@ define([
 			}
 		}
 	};
+
+	if(has("native-xhr2")){
+		handlers.arraybuffer = handlers.blob = handlers.document = function(xhr, ioArgs){
+			if(ioArgs.args.handleAs === 'blob' && !has('native-xhr2-blob')){
+				return new Blob([ xhr.response ], { type: xhr.getResponseHeader('Content-Type') });
+			}
+			return xhr.response;
+		};
+	}
 
 	/*=====
 
@@ -429,7 +449,7 @@ define([
 		// summary:
 		//		okHandler function for dojo._ioSetArgs call.
 
-		var ret = handlers[dfd.ioArgs.handleAs](dfd.ioArgs.xhr);
+		var ret = handlers[dfd.ioArgs.handleAs](dfd.ioArgs.xhr, dfd.ioArgs);
 		return ret === undefined ? null : ret;
 	};
 	var _deferError = function(/*Error*/error, /*Deferred*/dfd){
@@ -586,9 +606,24 @@ define([
 			dojo._ioAddQueryToUrl(ioArgs);
 		}
 
+		var XHR2_RESPONSE_TYPES;
+		if(has("native-xhr2")){
+			XHR2_RESPONSE_TYPES = {
+				arraybuffer: 1,
+				blob: 1,
+				document: 1
+			};
+		}
+
+		var handleAs = has("native-xhr2") && XHR2_RESPONSE_TYPES[args.handleAs] ? args.handleAs : "text";
+		if(handleAs === 'blob' && !has('native-xhr2-blob')){
+			handleAs = 'arraybuffer';
+		}
+
 		var options = {
 			method: method,
-			handleAs: "text",
+			handleAs: handleAs,
+			responseType: args.responseType,
 			timeout: args.timeout,
 			withCredentials: args.withCredentials,
 			ioArgs: ioArgs
