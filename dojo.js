@@ -482,8 +482,7 @@
 			= 0;
 
 	if(has("dojo-config-api")){
-		var consumePendingCacheInsert = function(referenceModule, clear){
-				clear = clear !== false;
+		var consumePendingCacheInsert = function(referenceModule){
 				var p, item, match, now, m;
 				for(p in pendingCacheInsert){
 					item = pendingCacheInsert[p];
@@ -500,9 +499,7 @@
 				if(now){
 					now(createRequire(referenceModule));
 				}
-				if(clear){
-					pendingCacheInsert = {};
-				}
+				pendingCacheInsert = {};
 			},
 
 			escapeString = function(s){
@@ -657,8 +654,9 @@
 				if(config.cache){
 					consumePendingCacheInsert();
 					pendingCacheInsert = config.cache;
-					//inject now all depencies so cache is available for mapped module
-					consumePendingCacheInsert(0, !!config.cache["*noref"]);
+					if(config.cache["*noref"]){
+						consumePendingCacheInsert();
+					}
 				}
 
 				signal("config", [config, req.rawConfig]);
@@ -960,7 +958,7 @@
 			}
 		},
 
-		getModuleInfo_ = function(mid, referenceModule, packs, modules, baseUrl, mapProgs, pathsMapProg, aliases, alwaysCreate, fromPendingCache){
+		getModuleInfo_ = function(mid, referenceModule, packs, modules, baseUrl, mapProgs, pathsMapProg, aliases, alwaysCreate){
 			// arguments are passed instead of using lexical variables so that this function my be used independent of the loader (e.g., the builder)
 			// alwaysCreate is useful in this case so that getModuleInfo never returns references to real modules owned by the loader
 			var pid, pack, midInPackage, mapItem, url, result, isRelative, requestedMid;
@@ -981,13 +979,11 @@
 				// at this point, mid is an absolute mid
 
 				// map the mid
-				if(!fromPendingCache && !isRelative && mapProgs.star){
-					mapItem = runMapProg(mid, mapProgs.star[1]);
-				}
-				if(!mapItem && referenceModule){
+				if(referenceModule){
 					mapItem = runMapProg(referenceModule.mid, mapProgs);
-					mapItem = mapItem && runMapProg(mid, mapItem[1]);
 				}
+				mapItem = mapItem || mapProgs.star;
+				mapItem = mapItem && runMapProg(mid, mapItem[1]);
 
 				if(mapItem){
 					mid = mapItem[1] + mid.substring(mapItem[3]);
@@ -1042,7 +1038,7 @@
 		},
 
 		getModuleInfo = function(mid, referenceModule, fromPendingCache){
-			return getModuleInfo_(mid, referenceModule, packs, modules, req.baseUrl, mapProgs, pathsMapProg, aliases, undefined, fromPendingCache);
+			return getModuleInfo_(mid, referenceModule, packs, modules, req.baseUrl, fromPendingCache ? [] : mapProgs, fromPendingCache ? [] : pathsMapProg, fromPendingCache ? [] : aliases);
 		},
 
 		resolvePluginResourceId = function(plugin, prid, referenceModule){
