@@ -317,6 +317,7 @@ define({ root:
 //end v1.x content
 ,
 	"ar": true,
+	"bs": true,
 	"cs": true,
 	"da": true,
 	"de": true,
@@ -328,6 +329,7 @@ define({ root:
 	"fi": true,
 	"fr": true,
 	"he": true,
+	"hr": true,
 	"hu": true,
 	"it": true,
 	"ja": true,
@@ -341,6 +343,7 @@ define({ root:
 	"pt-pt": true,
 	"ro": true,
 	"ru": true,
+	"sr": true,
 	"sv": true,
 	"th": true,
 	"tr": true,

@@ -418,6 +418,7 @@ define({ root:
     "et": true,
 	"fi": true,
 	"fr": true,
+	"hr": true,
 	"hu": true,
 	"it": true,
 	"ja": true,
