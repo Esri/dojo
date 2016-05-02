@@ -343,6 +343,7 @@ define({ root:
 	"mk": true,
     "lt": true,
     "lv": true,
+	"mk": true,
 	"nb": true,
 	"nl": true,
 	"pl": true,
