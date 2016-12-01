@@ -242,9 +242,10 @@ define(["./_base/kernel", "require", "./has", "./_base/array", "./_base/config",
 			//		of these additional transactions can be done concurrently. Owing to this analysis, the entire preloading
 			//		algorithm can be discard during a build by setting the has feature dojo-preload-i18n-Api to false.
 
+			var split = id.split("*"),
+				preloadDemand = split[1] == "preload";
+
 			if(has("dojo-preload-i18n-Api")){
-				var split = id.split("*"),
-					preloadDemand = split[1] == "preload";
 				if(preloadDemand){
 					if(!cache[id]){
 						// use cache[id] to prevent multiple preloads of the same preload; this shouldn't happen, but
@@ -258,6 +259,11 @@ define(["./_base/kernel", "require", "./has", "./_base/array", "./_base/config",
 				if(preloadDemand || waitForPreloads(id, require, load)){
 					return;
 				}
+			}
+			else if (preloadDemand) {
+				load(1);
+
+				return;
 			}
 
 			var match = nlsRe.exec(id),
