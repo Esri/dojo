@@ -185,6 +185,7 @@ yellowgreen: "yellow green"
 "id": true,
 "hu": true,
 "hr": true,
+"hi": true,
 "he": true,
 "fr": true,
 "fi": true,
