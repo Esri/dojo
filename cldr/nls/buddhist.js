@@ -327,6 +327,7 @@ define({ root:
     "et": true,    
 	"fi": true,
 	"fr": true,
+	"hi": true,
 	"hr": true,
 	"hu": true,
 	"id": true,

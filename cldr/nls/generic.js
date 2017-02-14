@@ -447,6 +447,7 @@ define({ root:
 	"fr": true,
 	"fr-ch": true,
 	"he": true,
+	"hi": true,
 	"hr": true,
 	"hu": true,
 	"id": true,

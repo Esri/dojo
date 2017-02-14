@@ -318,6 +318,7 @@ define({ root:
 ,
 	"ar": true,
 	"fr": true,
+	"hi": true,
 	"hu": true,
 	"id": true,
 	"ja": true,
