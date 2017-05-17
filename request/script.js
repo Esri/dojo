@@ -26,13 +26,9 @@ define([
 		callbacks = kernel.global[mid + '_callbacks'] = {},
 		deadScripts = [];
 
-	function attach(id, url, frameDoc, errorHandler){
+	function attach(id, url, frameDoc){
 		var doc = (frameDoc || win.doc),
 			element = doc.createElement('script');
-
-		if (errorHandler) {
-			on.once(element, 'error', errorHandler);
-		}
 
 		element.type = 'text/javascript';
 		element.src = url;
@@ -154,10 +150,7 @@ define([
 		}
 
 		if(!options.canAttach || options.canAttach(dfd)){
-			var node = script._attach(dfd.id, url, options.frameDoc, function (error) {
-				dfd.reject(error);
-				script._remove(dfd.id, options.frameDoc, true);
-			});
+			var node = script._attach(dfd.id, url, options.frameDoc);
 
 			if(!options.jsonp && !options.checkString){
 				var handle = on(node, loadEvent, function(evt){
@@ -168,6 +161,11 @@ define([
 				});
 			}
 		}
+
+		on.once(node, 'error', function (error) {
+			dfd.reject(error);
+			script._remove(dfd.id, options.frameDoc, true);
+		});
 
 		watch(dfd);
 
