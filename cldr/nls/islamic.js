@@ -325,7 +325,6 @@ define({ root:
 	"en-au": true,
 	"en-gb": true,
 	"es": true,
-    "et": true,
 	"fi": true,
 	"fr": true,
 	"he": true,

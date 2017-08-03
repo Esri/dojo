@@ -425,7 +425,6 @@ define({ root:
 	"ja": true,
 	"ko": true,
     "lt": true,
-    "lv": true,
 	"nl": true,
 	"pl": true,
 	"pt": true,
