@@ -335,7 +335,6 @@ define({ root:
 	"el": true,
 	"en": true,
 	"es": true,
-    "et": true,
     "lt": true,
     "lv": true,
 	"fi": true,
