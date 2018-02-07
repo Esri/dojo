@@ -443,6 +443,7 @@ define({ root:
 	"en-ca": true,
 	"en-gb": true,
 	"es": true,
+	"es-mx": true,
 	"fi": true,
 	"fr": true,
 	"fr-ch": true,
