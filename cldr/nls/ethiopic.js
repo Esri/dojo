@@ -446,12 +446,16 @@ define({ root:
 //end v1.x content
 ,
 	"ar": true,
+	"cs": true,
 	"fr": true,
 	"hi": true,
+	"hr": true,
 	"hu": true,
 	"id": true,
 	"ja": true,
 	"ko": true,
+	"lt": true,
+	"nb": true,
 	"nl": true,
 	"pl": true,
 	"pt": true,
@@ -461,6 +465,8 @@ define({ root:
 	"sv": true,
 	"th": true,
 	"tr": true,
+	"uk": true,
+	"vi": true,
 	"zh": true,
 	"zh-hant": true
 });

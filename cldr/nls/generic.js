@@ -444,6 +444,7 @@ define({ root:
 	"en-gb": true,
 	"es": true,
 	"es-mx": true,
+	"et": true,
 	"fi": true,
 	"fr": true,
 	"fr-ch": true,
@@ -471,7 +472,8 @@ define({ root:
 	"sv": true,
 	"th": true,
 	"tr": true,
-    "vi": true,
+	"uk": true,
+	"vi": true,
 	"zh": true,
 	"zh-hant": true
 });

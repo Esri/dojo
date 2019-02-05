@@ -444,6 +444,7 @@ define({ root:
 //end v1.x content
 ,
 	"ar": true,
+	"bs": true,
 	"ca": true,
 	"cs": true,
 	"da": true,

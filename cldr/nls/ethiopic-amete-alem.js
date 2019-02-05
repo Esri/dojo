@@ -469,4 +469,7 @@ define({ root:
 	}
 }
 //end v1.x content
+	"lt": true,
+	"nb": true,
+	"zh": true
 });
