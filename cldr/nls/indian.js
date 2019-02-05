@@ -437,10 +437,15 @@ define({ root:
 //end v1.x content
 ,
 	"en-gb": true,
+	"cs": true,
 	"fr": true,
+	"hi": true,
+	"hr": true,
 	"hu": true,
 	"id": true,
 	"ja": true,
+	"lt": true,
+	"nb": true,
 	"nl": true,
 	"pl": true,
 	"pt": true,
@@ -448,6 +453,8 @@ define({ root:
 	"sr": true,
 	"sv": true,
 	"th": true,
+	"uk": true,
+	"vi": true,
 	"zh": true,
 	"zh-hant": true
 });

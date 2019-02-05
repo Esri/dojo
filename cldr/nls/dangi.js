@@ -436,10 +436,13 @@ define({ root:
 }
 //end v1.x content
 ,
+	"cs": true,
 	"fr": true,
+	"id": true,
 	"ja": true,
 	"ko": true,
 	"nl": true,
+	"lt": true,
 	"sv": true,
 	"th": true,
 	"zh-hant": true

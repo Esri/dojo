@@ -329,6 +329,7 @@ define({ root:
 //end v1.x content
 ,
 	"ar": true,
+	"bs": true,
 	"cs": true,
 	"da": true,
 	"de": true,
@@ -357,7 +358,8 @@ define({ root:
 	"sv": true,
 	"th": true,
 	"tr": true,
-    "vi": true,
+	"uk": true,
+	"vi": true,
 	"zh": true,
 	"zh-hant": true
 });
