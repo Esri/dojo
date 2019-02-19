@@ -13,7 +13,7 @@ define(
   "infinity": "∞",
   "nan": "NaN",
   "timeSeparator": ":",
-	"percentFormat": "#,##0%"
+  "percentFormat": "#,##0%"
 }
 //end v1.x content
 );
