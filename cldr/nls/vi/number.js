@@ -1,25 +1,25 @@
 define(
 //begin v1.x content
 {
-	"scientificFormat": "#E0",
-	"infinity": "∞",
-	"superscriptingExponent": "×",
+	"decimal": ",",
+	"group": ".",
 	"list": ";",
 	"percentSign": "%",
-	"minusSign": "-",
-	"decimalFormat-short": "000 NT",
-	"nan": "NaN",
 	"plusSign": "+",
-	"currencyFormat": "#,##0.00 ¤",
+	"minusSign": "-",
+	"exponential": "E",
+	"superscriptingExponent": "×",
 	"perMille": "‰",
-	"group": ".",
-	"percentFormat": "#,##0%",
-	"decimalFormat-long": "000 nghìn tỷ",
-	"decimalFormat": "#,##0.###",
-	"currencyFormat-short": "000 NT ¤",
+	"infinity": "∞",
+	"nan": "NaN",
 	"timeSeparator": ":",
-	"decimal": ",",
-	"exponential": "E"
+	"decimalFormat": "#,##0.###",
+	"decimalFormat-long": "000 nghìn tỷ",
+	"decimalFormat-short": "000 NT",
+	"scientificFormat": "#E0",
+	"percentFormat": "#,##0%",
+	"currencyFormat": "#,##0.00 ¤",
+	"currencyFormat-short": "000 NT ¤"
 }
 //end v1.x content
 );

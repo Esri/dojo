@@ -1,8 +1,7 @@
 define(
 //begin v1.x content
 {
-	"$locale": "zh-hant-hk",
-	"nan": "非數值"
+	"$locale": "zh-hant-hk"
 }
 //end v1.x content
 );

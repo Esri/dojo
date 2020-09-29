@@ -1,14 +1,14 @@
 define(
 //begin v1.x content
 {
-	"USD_symbol": "USD",
+	"AUD_symbol": "$",
 	"CAD_symbol": "CAD",
+	"CNY_symbol": "CNY",
+	"EUR_symbol": "EUR",
 	"GBP_symbol": "GBP",
 	"HKD_symbol": "HKD",
 	"JPY_symbol": "JPY",
-	"AUD_symbol": "$",
-	"CNY_symbol": "CNY",
-	"EUR_symbol": "EUR"
+	"USD_symbol": "USD"
 }
 //end v1.x content
 );

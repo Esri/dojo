@@ -1,24 +1,24 @@
 define(
 //begin v1.x content
 {
-	"HKD_displayName": "Honkongas dolārs",
+	"AUD_displayName": "Austrālijas dolārs",
+	"AUD_symbol": "AU$",
+	"CAD_displayName": "Kanādas dolārs",
+	"CAD_symbol": "CA$",
+	"CHF_displayName": "Šveices franks",
+	"CHF_symbol": "CHF",
 	"CNY_displayName": "Ķīnas juaņs",
+	"CNY_symbol": "CN¥",
+	"EUR_displayName": "eiro",
+	"EUR_symbol": "€",
+	"GBP_displayName": "Lielbritānijas mārciņa",
+	"GBP_symbol": "£",
+	"HKD_displayName": "Honkongas dolārs",
+	"HKD_symbol": "HK$",
 	"JPY_displayName": "Japānas jena",
 	"JPY_symbol": "¥",
 	"USD_displayName": "ASV dolārs",
-	"CAD_symbol": "CA$",
-	"GBP_displayName": "Lielbritānijas mārciņa",
-	"CHF_displayName": "Šveices franks",
-	"CNY_symbol": "CN¥",
-	"EUR_displayName": "eiro",
-	"GBP_symbol": "£",
-	"CAD_displayName": "Kanādas dolārs",
-	"USD_symbol": "$",
-	"EUR_symbol": "€",
-	"AUD_displayName": "Austrālijas dolārs",
-	"CHF_symbol": "CHF",
-	"HKD_symbol": "HK$",
-	"AUD_symbol": "AU$"
+	"USD_symbol": "$"
 }
 //end v1.x content
 );

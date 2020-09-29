@@ -1,25 +1,25 @@
 define(
 //begin v1.x content
 {
-	"scientificFormat": "#E0",
-	"infinity": "∞",
-	"superscriptingExponent": "×",
+	"decimal": ".",
+	"group": ",",
 	"list": ";",
 	"percentSign": "‎%‎",
-	"minusSign": "‎-",
-	"decimalFormat-short": "000 ترليو",
-	"nan": "ليس رقمًا",
 	"plusSign": "‎+",
-	"currencyFormat": "¤#,##0.00;(¤#,##0.00)",
+	"minusSign": "‎-",
+	"exponential": "E",
+	"superscriptingExponent": "×",
 	"perMille": "‰",
-	"group": ",",
-	"percentFormat": "#,##0%",
-	"decimalFormat-long": "000 تريليون",
-	"decimalFormat": "#,##0.###",
-	"currencyFormat-short": "¤ 000 ترليو",
+	"infinity": "∞",
+	"nan": "ليس رقمًا",
 	"timeSeparator": ":",
-	"decimal": ".",
-	"exponential": "E"
+	"decimalFormat": "#,##0.###",
+	"decimalFormat-long": "000 تريليون",
+	"decimalFormat-short": "000 ترليو",
+	"scientificFormat": "#E0",
+	"percentFormat": "#,##0%",
+	"currencyFormat": "¤#,##0.00;(¤#,##0.00)",
+	"currencyFormat-short": "¤ 000 ترليو"
 }
 //end v1.x content
 );

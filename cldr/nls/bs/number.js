@@ -1,24 +1,24 @@
 define(
 //begin v1.x content
 {
-	"scientificFormat": "#E0",
-	"infinity": "∞",
-	"superscriptingExponent": "×",
-	"percentSign": "%",
-	"minusSign": "-",
-	"decimalFormat-short": "000 bil'.'",
-	"nan": "NaN",
-	"plusSign": "+",
-	"currencyFormat": "#,##0.00 ¤",
-	"perMille": "‰",
-	"group": ".",
-	"percentFormat": "#,##0 %",
-	"decimalFormat-long": "000 biliona",
-	"decimalFormat": "#,##0.###",
-	"currencyFormat-short": "000 bil'.' ¤",
-	"timeSeparator": ":",
 	"decimal": ",",
-	"exponential": "E"
+	"group": ".",
+	"percentSign": "%",
+	"plusSign": "+",
+	"minusSign": "-",
+	"exponential": "E",
+	"superscriptingExponent": "×",
+	"perMille": "‰",
+	"infinity": "∞",
+	"nan": "NaN",
+	"timeSeparator": ":",
+	"decimalFormat": "#,##0.###",
+	"decimalFormat-long": "000 biliona",
+	"decimalFormat-short": "000 bil'.'",
+	"scientificFormat": "#E0",
+	"percentFormat": "#,##0 %",
+	"currencyFormat": "#,##0.00 ¤",
+	"currencyFormat-short": "000 bil'.' ¤"
 }
 //end v1.x content
 );

@@ -6,6 +6,7 @@ define(
 	"CAD_displayName": "कनाडाई डॉलर",
 	"CAD_symbol": "CA$",
 	"CHF_displayName": "स्विस फ़्रैंक",
+	"CHF_symbol": "CHF",
 	"CNY_displayName": "चीनी युआन",
 	"CNY_symbol": "CN¥",
 	"EUR_displayName": "यूरो",
