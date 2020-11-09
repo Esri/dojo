@@ -45,6 +45,7 @@ define({ root:
 	"pt-pt": true,
 	"ro": true,
 	"ru": true,
+	"sk": true,
 	"sl": true,
 	"sr": true,
 	"sv": true,
