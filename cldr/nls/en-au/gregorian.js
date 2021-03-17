@@ -105,6 +105,7 @@ define(
 	"dayPeriods-standAlone-wide-am": "am",
 	"dayPeriods-standAlone-wide-noon": "midday",
 	"dayPeriods-standAlone-wide-pm": "pm",
+	"dateFormat-long": "d MMMM y",
 	"dateFormat-short": "d/M/yy",
 	"dateFormatItem-yMMMEd": "E, d MMM,y",
 	"field-hour-short": "h",

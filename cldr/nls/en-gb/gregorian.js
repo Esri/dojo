@@ -13,6 +13,7 @@ define(
 	"timeFormat-long": "HH:mm:ss z",
 	"timeFormat-medium": "HH:mm:ss",
 	"timeFormat-short": "HH:mm",
+	"dateFormat-long": "d MMMM y",
 	"dateFormatItem-MEd": "E dd/MM",
 	"dateFormatItem-MMMEd": "E d MMM"
 }
